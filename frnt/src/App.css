@@ -1,0 +1,266 @@
+/* =======================
+   General Styles
+======================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* =======================
+   Headings
+======================= */
+h1 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+body.dark-mode h1 {
+  color: #e0e0e0;
+}
+
+/* =======================
+   Container
+======================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =======================
+   Search Input
+======================= */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0,123,255,0.2);
+}
+
+body.dark-mode input[type="text"] {
+  background: #1e1e1e;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+/* =======================
+   Table Styles
+======================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background 0.3s;
+}
+
+body.dark-mode table {
+  background-color: #1e1e1e;
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+th {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  font-weight: 600;
+}
+
+body.dark-mode th {
+  background: linear-gradient(90deg, #1f618d, #0d3c61);
+}
+
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+body.dark-mode tr:nth-child(even) td {
+  background-color: #2a2a2a;
+}
+
+tr:hover td {
+  background-color: #f1faff;
+  transition: 0.3s;
+}
+
+body.dark-mode tr:hover td {
+  background-color: #333;
+}
+
+/* =======================
+   Comfort Score Colors
+======================= */
+.score-high {
+  color: #28a745; /* green */
+  font-weight: 700;
+}
+
+.score-medium {
+  color: #fd7e14; /* orange */
+  font-weight: 700;
+}
+
+.score-low {
+  color: #dc3545; /* red */
+  font-weight: 700;
+}
+
+/* =======================
+   Buttons
+======================= */
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button.primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.primary:hover {
+  background-color: #0056b3;
+}
+
+button.secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+button.secondary:hover {
+  background-color: #5a6268;
+}
+
+button.danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.danger:hover {
+  background-color: #b02a37;
+}
+
+/* =======================
+   Spinner / Loader
+======================= */
+.spinner-border {
+  display: block;
+  margin: 50px auto;
+}
+
+/* =======================
+   Mobile Responsive Table
+======================= */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    padding: 15px;
+    transition: background 0.3s;
+  }
+
+  body.dark-mode tr {
+    background: #888383;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    font-weight: 600;
+    text-align: left;
+    color: #555;
+  }
+
+  body.dark-mode td::before {
+    color: #ccc;
+    
+  }
+}
+
+/* =======================
+   Mobile Cards
+======================= */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+body.dark-mode .card {
+  background: #1e1e1e;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  font-weight: 700;
+  color: #007bff;
+}
+
+body.dark-mode .card-title {
+  color: #00c6ff;
+}
+
+.card-text {
+  margin: 5px 0;
+  color: #555;
+}
+
+body.dark-mode .card-text {
+  color: #ccc;
+}
